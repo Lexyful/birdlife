@@ -1,27 +1,17 @@
 import React, {useEffect, useState} from 'react'
 import { fetchData } from '../data/apiCalls'
 import { Home } from '../Home/Home';
+import { Nav } from "../Nav/Nav";
 import { GalleryContainer } from '../GalleryContainer/GalleryContainer';
-import { Route, Link } from 'react-router-dom';
+import { Route, Link, Switch } from 'react-router-dom';
 import "./App.css";
 
 const App = () => {
   const [birds, setBirds] = useState([]);
   const [birdIds, setBirdIDs] = useState([])
 
-  // const [error, setError] = useState('');
-  
-  // const fetchBirdData = () => {
-  //   fetchData(birds)
-  //     .then(data => {
-  //       setBirds(data.message)
-  //     })
-  //     // .catch(err => {
-  //     //   setError(`Sorry there was a ${err.message} error please try again`);
-  //     // });
-  // }
   const fetchBirdData = () => { 
-      fetchData()
+      fetchData(`${birds}`)
       .then(data => {
           setBirds(data)  
       })
@@ -41,17 +31,15 @@ const App = () => {
     fetchBirdData()
     
   }, [])
-  // useEffect(() => {
-  //   if(birds !== ''){
-  //     fetchBirdData()
-  //   }  
-  // }, [birds]);
+
 
   return (
  <>
-<Route path="/:bird" render={({match}) => <GalleryContainer birds={match.params.id} /> }/>
-{/* <GalleryContainer birds={birdIds}/> */}
-<Route exact path="/" render={() => <Home />} />
+  <Nav />
+  <Switch>
+    <Route exact path="/" render={() => <Home />} />
+    <Route path="/bird-gallery/" render={({match}) => <GalleryContainer birds={birdIds} /> }/>
+  </Switch>
  </>
   );
 }
