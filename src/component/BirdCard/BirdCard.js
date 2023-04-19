@@ -1,10 +1,10 @@
 import React from 'react'
 import './BirdCard.css'
 
-export const BirdCard = ({ birds }) => {
-  return(
+export const BirdCard = ({ bird }) => {
+  return(  
   <div className='card'>
-    <p>{birds}</p>
+    <p>{bird}</p>
   </div>
   )
 }
