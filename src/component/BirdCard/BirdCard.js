@@ -4,7 +4,7 @@ import './BirdCard.css'
 export const BirdCard = ({ bird }) => {
   return(  
   <div className='card'>
-    <p>{bird}</p>
+    <img className="bird-card" src={bird} alt="" />
   </div>
   )
 }

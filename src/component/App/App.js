@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { fetchData } from '../data/apiCalls'
+import { Home } from '../Home/Home';
 import { GalleryContainer } from '../GalleryContainer/GalleryContainer';
 import { Route, Link } from 'react-router-dom';
 import "./App.css";
@@ -7,6 +8,7 @@ import "./App.css";
 const App = () => {
   const [birds, setBirds] = useState([]);
   const [birdIds, setBirdIDs] = useState([])
+
   // const [error, setError] = useState('');
   
   // const fetchBirdData = () => {
@@ -37,6 +39,7 @@ const App = () => {
 
   useEffect(() => {
     fetchBirdData()
+    
   }, [])
   // useEffect(() => {
   //   if(birds !== ''){
@@ -46,9 +49,9 @@ const App = () => {
 
   return (
  <>
-<Route path="/:bird" render={({ match }) => { console.log(match)}} />
-
- <GalleryContainer birds={birdIds} />
+<Route path="/:bird" render={({match}) => <GalleryContainer birds={match.params.id} /> }/>
+{/* <GalleryContainer birds={birdIds}/> */}
+<Route exact path="/" render={() => <Home />} />
  </>
   );
 }
