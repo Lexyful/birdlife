@@ -1,0 +1,70 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap"); */
+
+.nav-bar {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 130px;
+  background: linear-gradient(0.85turn, #f2e877 55%, #e8f1f7 50%);
+  color: white;
+}
+
+.birdlife-title {
+  font-family: 'Actor';font-size: 22px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 3.0em;
+  color: white;
+  text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+  margin: 0;
+}
+
+.birdlife-title:hover {
+  color: white;
+  text-shadow: 2px 4px 4px rgb(242 192 201);
+}
+
+.museum-title:active {
+  text-shadow: 2px 4px 4px rgb(220, 160, 183);
+  scale: 1.01;
+}
+
+.nav-btns {
+  display: flex;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: auto;
+}
+
+.nav-btn {
+  height: 50px;
+  width: 160px;
+  margin: 5px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #fcfcfc;
+  color: rgb(0, 0, 0);
+  font-family: 'Actor';
+  font-size: medium;
+  font-weight: bolder;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.571);
+  cursor: pointer;
+  transition: 0.5ms;
+}
+
+.nav-btn:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.711);
+  background-color: #d9bb24;
+  border: 3px solid #e3bc23;
+  scale: 1.01;
+}
+
+.nav-btn:active {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.711);
+  background-color: #307cb2;
+  border: 3px solid #f2bfc8;
+  scale: 1.01;
+}

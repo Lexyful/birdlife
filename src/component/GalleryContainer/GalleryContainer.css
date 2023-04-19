@@ -1,0 +1,11 @@
+.gallery-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: fit-content;
+  min-height: inherit;
+  margin-top: 130px;
+  padding-top: 30px;
+  background-color: #f5f5f5;
+}

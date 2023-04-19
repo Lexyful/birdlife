@@ -1,0 +1,12 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  height: 260px;
+}
+
+.bird-card {
+  height: 200px;
+  border: 3mm ridge #3b92d0;
+}
