@@ -11,7 +11,6 @@ const App = () => {
   const [birds, setBirds] = useState([]);
   const [favorites, setFavorites] = useState([]);
   const [error, setError] = useState([])
-  console.log('render')
   const fetchBirdData = () => { 
     fetchData(`${birds}`)
     .then(data => {
@@ -20,8 +19,8 @@ const App = () => {
         // console.log(data.some(element))
     })
     
-    .catch(err => {
-      setError(`Sorry there was a ${err.message} error please try again`);
+    .catch(error => {
+      setError(`Sorry there was a ${error.message} error please try again`);
     });
   }
 
@@ -42,6 +41,7 @@ const App = () => {
     <>
       <Nav />
       {/* <Switch> */}
+      {error && <p>{error}</p>}
         <Route exact path="/" render={() => <Home birds={ birds } />} />
         <Route exact path="/bird-gallery/" render={({match}) => <GalleryContainer birds={birds} onAddFavorite={handleAddFavorite} />} />
         <Route path="/favorites" render={() => <Favorites favorites={favorites} deleteFavorite={deleteFavorite}/>} />

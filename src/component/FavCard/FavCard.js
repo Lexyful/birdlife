@@ -7,7 +7,7 @@ export const FavCard = ({url, deleteFavorite}) => {
 
   return (
     <div className="favorite-card">
-      <img className="favorit-bird" src={url} alt=""/>
+      <img className="favorit-bird-card" src={url} alt=""/>
       <button onClick={() => deleteFavorite(url)} className="delete-button">Delete</button>
     </div>
   );
