@@ -2,13 +2,8 @@ import React, { useState } from "react";
 
 import "./FavCard.css";
 
-export const FavCard = ({url}) => {
+export const FavCard = ({url, deleteFavorite}) => {
   const [favorites, setFavorites] = useState([])
-
-  const deleteFavorite = (url) => {
-    const filterFav = favorites.filter(favorite => favorite !== url);
-    setFavorites(filterFav);
-  }
 
   return (
     <div className="favorite-card">
