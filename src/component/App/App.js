@@ -4,44 +4,50 @@ import { Home } from '../Home/Home';
 import { Nav } from "../Nav/Nav";
 import { GalleryContainer } from '../GalleryContainer/GalleryContainer';
 import { Route, Link, Switch } from 'react-router-dom';
+import { Favorites } from '../Favorites/Favorites';
 import "./App.css";
 
 const App = () => {
   const [birds, setBirds] = useState([]);
-  const [birdIds, setBirdIDs] = useState([])
-
+  const [favorites, setFavorites] = useState([]);
+  const [error, setError] = useState([])
+  console.log('render')
   const fetchBirdData = () => { 
-      fetchData(`${birds}`)
-      .then(data => {
-          setBirds(data)  
-      })
-      .then(() => {
-        const allBirds = birds.map((bird, index) => {
-          let birdObj = {}
-          birdObj.id = index
-          birdObj.bird = bird
-          return birdObj
-        })
-        setBirdIDs(allBirds)
-      })
+    fetchData(`${birds}`)
+    .then(data => {
+        setBirds(data)
+       
+        // console.log(data.some(element))
+    })
+    
+    .catch(err => {
+      setError(`Sorry there was a ${err.message} error please try again`);
+    });
+  }
 
+  const handleAddFavorite = (url) => {
+    setFavorites([...favorites, url]);
+  }
+
+  const deleteFavorite = (url) => {
+    const filterFav = favorites.filter(favorite => favorite !== url);
+    setFavorites(filterFav);
   }
 
   useEffect(() => {
     fetchBirdData()
-    
   }, [])
 
-
   return (
- <>
-  <Nav />
-  <Switch>
-    <Route exact path="/" render={() => <Home />} />
-    <Route path="/bird-gallery/" render={({match}) => <GalleryContainer birds={birdIds} /> }/>
-  </Switch>
- </>
+    <>
+      <Nav />
+      {/* <Switch> */}
+        <Route exact path="/" render={() => <Home birds={ birds } />} />
+        <Route exact path="/bird-gallery/" render={({match}) => <GalleryContainer birds={birds} onAddFavorite={handleAddFavorite} />} />
+        <Route path="/favorites" render={() => <Favorites favorites={favorites} deleteFavorite={deleteFavorite}/>} />
+      {/* </Switch> */}
+    </>
   );
 }
-//match.param.id
-export default App;
+
+export default App

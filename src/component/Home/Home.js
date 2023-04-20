@@ -1,35 +1,29 @@
 import React, { useEffect, useState } from "react";
-import { fetchData } from "../data/apiCalls";
 import "./Home.css"
 
-export const Home = () => {
+export const Home = ({ birds }) => {
   const [randomBird, setRandomBird] = useState('');
-  const [error, setError] = useState('');
 
-  const fetchRandomBird = () => {
-    fetchData()
-      .then(data => {
-        setRandomBird(data.message);
-      })
-      .catch(err => {
-        setError(`Sorry there was a ${err} error please try again`);
-      });
+
+  const getRandomBird = () => {
+    const mainBirdPicture = birds[Math.floor(Math.random() * (birds.length + 1))]
+    console.log(mainBirdPicture)
+    setRandomBird(mainBirdPicture)
   }
 
-  useEffect(() => {fetchRandomBird()}, []);
+  useEffect(() => {getRandomBird()}, [birds]);
 
   return(
     <section className="home-page">
       <h2 className="welcome">Welcome</h2>
       <div className="home-contents-container">
       <div className="get-random">
-          <button onClick={() => fetchRandomBird()} >Get Random Bird!</button>
         <div className="img-container">
             <img className="random-bird-img" src={randomBird}/>
             </div>
+          <button onClick={getRandomBird} >Get Random Bird!</button>
             </div>
-      
-          </div>
+        </div>
     </section>
   );
 }

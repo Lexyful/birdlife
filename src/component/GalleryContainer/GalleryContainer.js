@@ -3,21 +3,16 @@ import { BirdCard } from "../BirdCard/BirdCard";
 import {  Link } from 'react-router-dom';
 import './GalleryContainer.css'
 
-export const GalleryContainer = (({birds}) => {
-  // const [birdUrls, setBirdUrls] = useState([]);
+export const GalleryContainer = ({ birds, onAddFavorite }) => {
   const birdCards = birds.map(bird => {
     return (
-      // <Link to={`/${bird.id}`}> 
-        <BirdCard bird={bird.bird} key={bird.bird} />
-      // </Link>
+      <BirdCard bird={bird} key={bird} onAddFavorite={onAddFavorite} />
     )
   })
 
-
   return(
     <div className="gallery-container">
-    {birdCards}
+      {birdCards}
     </div>
   )
-
-})
+}

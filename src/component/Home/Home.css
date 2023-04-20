@@ -1,6 +1,11 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Actor&display=swap');
   
+  body {
+    background-image: url('https://live.staticflickr.com/65535/49049153921_7a83726af7_k.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
 .home-page {
   display: flex;
@@ -9,7 +14,6 @@
   justify-content: flex-start;
   height: 100%;
   margin-top: 130px;
-  background-color: #000000;
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
 }
@@ -17,7 +21,7 @@
 .welcome {
   font-family: 'Actor';font-size: 22px;
   position: absolute;
-  font-size: 2.5em;
+  font-size: 4.5em;
   color: white;
 }
 
@@ -37,7 +41,7 @@
 
 .get-random > button {
   height: 50px;
-  width: 155px;
+  width: 300px;
   border: 0;
   border-radius: 7px;
   margin: 10px;
@@ -48,6 +52,7 @@
   font-size: medium;
   font-weight: bolder;
   transition: 0.5s;
+  margin-top: 40px;
 }
 
 .get-random > button:hover {
@@ -61,11 +66,12 @@
 }
 
 .img-container {
+  margin-top: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 300px;
   /* border: 4mm ridge #808383; */
   background-color: #fafafa;
 }
