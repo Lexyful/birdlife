@@ -3,17 +3,24 @@ import { fetchData } from "../data/apiCalls";
 import "./Home.css"
 
 export const Home = () => {
+  const [birds, setBirds] = useState([]);
   const [randomBird, setRandomBird] = useState('');
   const [error, setError] = useState('');
 
   const fetchRandomBird = () => {
-    fetchData('birds/image/random')
-      .then(data => {
-        setRandomBird(data.message);
+    fetchData(`${birds}`)
+    .then(data => {
+        setBirds(data)  
       })
-      .catch(err => {
-        setError(`Sorry there was a ${err} error please try again`);
-      });
+      .then(() => {
+        const mainBird = birds.find((bird, index) => {
+          let randomObj = {}
+          randomObj.id = index
+          randomObj.bird = bird
+          return randomObj
+        })
+        setRandomBird(mainBird)
+      })
   }
 
   useEffect(() => {fetchRandomBird()}, []);
