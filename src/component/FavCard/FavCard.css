@@ -1,34 +1,34 @@
-.fave-card {
+.favorite-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 10px;
-  height: 260px;
+  height: 200px;
 }
 
-.fave-bird {
+.favorit-bird-card {
   height: 200px;
-  border: 3mm ridge #3b92d0;
 }
 
 .delete-button {
-  width: 70px;
+  width: 60px;
   height: 30px;
   border: 0;
-  border-radius: 7px;
   margin: 6px;
-  background: #3b92d0;
-  color: white;
+  background: #f6e08b;
+  color: rgb(90, 89, 89);
   cursor: pointer;
   transition: 0.5s;
   font-size: large;
-  font-weight: bold;
+  /* font-weight: bold; */
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.571);
 }
 
 .delete-button:hover {
-  scale:1.1;
-  background-color: #f96162;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.711);
+  background-color: #f9f1c8;
+  border: 3px solid #f6f6f6;
+  scale: 1.01;
 }
 
 .delete-button:active {
