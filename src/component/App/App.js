@@ -4,6 +4,7 @@ import { Home } from '../Home/Home';
 import { Nav } from "../Nav/Nav";
 import { GalleryContainer } from '../GalleryContainer/GalleryContainer';
 import { Route, Link, Switch } from 'react-router-dom';
+import { Favorites } from '../Favorites/Favorites';
 import "./App.css";
 
 const App = () => {
@@ -36,10 +37,11 @@ const App = () => {
   return (
  <>
   <Nav />
-  <Switch>
+  {/* <Switch> */}
     <Route exact path="/" render={() => <Home />} />
     <Route path="/bird-gallery/" render={({match}) => <GalleryContainer birds={birdIds} /> }/>
-  </Switch>
+    <Route path="/favorites" render={() => <Favorites />} />
+  {/* </Switch> */}
  </>
   );
 }

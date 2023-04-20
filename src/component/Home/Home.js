@@ -7,7 +7,7 @@ export const Home = () => {
   const [error, setError] = useState('');
 
   const fetchRandomBird = () => {
-    fetchData()
+    fetchData('birds/image/random')
       .then(data => {
         setRandomBird(data.message);
       })
