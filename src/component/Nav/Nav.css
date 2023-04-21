@@ -1,8 +1,8 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap"); */
 
 .nav-bar {
-  position: fixed;
-  z-index: 1;
+  /* position: fixed; */
+  /* z-index: 1; */
   top: 0;
   width: 100%;
   height: 130px;
@@ -12,7 +12,7 @@
 
 .birdlife-title {
   font-family: 'Actor';font-size: 22px;
-  position: absolute;
+  /* position: absolute; */
   top: 20px;
   left: 20px;
   font-size: 3.0em;
@@ -26,10 +26,6 @@
   text-shadow: 2px 4px 4px rgb(242 192 201);
 }
 
-.museum-title:active {
-  text-shadow: 2px 4px 4px rgb(220, 160, 183);
-  scale: 1.01;
-}
 
 .nav-buttons {
   display: flex;

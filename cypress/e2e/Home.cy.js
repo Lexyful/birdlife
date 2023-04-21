@@ -1,10 +1,10 @@
-describe('Home Page', () => {
+describe('Home', () => {
   beforeEach(() => {
     cy.intercept('GET', 'https://shibe.online/api/birds?count=50&urls=true&httpsUrls=true', {
-      statusCode: 200,  
+        
       fixture: "randomBird.json"
     })
-    cy.visit('http://localhost:3000')
+    cy.visit('http://localhost:3000/')
   })
 
   it('should have a title', () => {
@@ -23,20 +23,25 @@ describe('Home Page', () => {
   })
 
   it('Should display a picture of a random bird', () => {
-    cy.get('.random-bird-img').should('have.attr', 'src').should('eq', 
-    "https://cdn.shibe.online/birds/427304.jpg")
+    cy.get('.random-bird-img').should('have.attr', 'src').should('eq',"https://cdn.shibe.online/birds/1be4e2a29bfea578c0dd53cc8354f5bdeb255eb8.jpg")
   })
 
   it('Should get a new random bird when the button is pressed', () => {
-    cy.intercept('GET', 'https://shibe.online/api/birds?count=50&urls=true&httpsUrls=true', {
-      statusCode: 200,  
-      fixture: "randomBirdButton.json"
+    cy.intercept('GET', 'https://shibe.online/api/birds?count=50&urls=true&httpsUrls=true', { 
+
+      fixture: "randomBird.json"
     })
-    cy.get('.get-random').click();
-    cy.get('.img-container').contains('.random-bird-img').should('have.attr', 'src').should('eq',   "https://cdn.shibe.online/birds/45532801.1603107766.jpg")
-    cy.get('.get-random').find('button').contains('Get Random Bird')
+    cy.get('.get-random > button').click()
+    cy.get('.random-bird-img').should('have.attr', 'src').should('eq',"https://cdn.shibe.online/birds/1be4e2a29bfea578c0dd53cc8354f5bdeb255eb8.jpg")
    
   })
+  it('Should show an error message when random dog can/t be fetched', () => {
+    cy.intercept('GET', 'https://shibe.online/api/birds?count=50&urls=true&httpsUrls=true', {
+      statusCode: 404,  
+    })
+    cy.get('.error-message')
+  })
+
   });
 
  

@@ -10,11 +10,12 @@ import "./App.css";
 const App = () => {
   const [birds, setBirds] = useState([]);
   const [favorites, setFavorites] = useState([]);
-  const [error, setError] = useState([])
+  const [error, setError] = useState('')
   const fetchBirdData = () => { 
-    fetchData(`${birds}`)
+    fetchData()
     .then(data => {
         setBirds(data)
+        console.log(data)
        
         // console.log(data.some(element))
     })
@@ -40,8 +41,8 @@ const App = () => {
   return (
     <>
       <Nav />
+      {error && <p className="error-message">{error}</p>}
       {/* <Switch> */}
-      {error && <p>{error}</p>}
         <Route exact path="/" render={() => <Home birds={ birds } />} />
         <Route exact path="/bird-gallery/" render={({match}) => <GalleryContainer birds={birds} onAddFavorite={handleAddFavorite} />} />
         <Route path="/favorites" render={() => <Favorites favorites={favorites} deleteFavorite={deleteFavorite}/>} />

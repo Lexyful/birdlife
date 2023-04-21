@@ -6,7 +6,7 @@ export const Home = ({ birds }) => {
 
 
   const getRandomBird = () => {
-    const mainBirdPicture = birds[Math.floor(Math.random() * (birds.length + 1))]
+    const mainBirdPicture = birds[Math.floor(Math.random() * (birds.length ))]
     setRandomBird(mainBirdPicture)
   }
 

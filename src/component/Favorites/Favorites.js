@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FavCard } from "../FavCard/FavCard";
+import { FavCard } from "../../FavCard/FavCard";
 import "./Favorites.css"
 
 export const Favorites = ({ favorites, deleteFavorite }) => {
