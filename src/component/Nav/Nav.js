@@ -8,15 +8,15 @@ export const Nav = () => {
       <NavLink to="/" style={{ textDecoration: 'none', color: 'white' }}>
         <h1 className='birdlife-title'> Birdlife</h1>
       </NavLink>
-      <div className="nav-btns">
+      <div className="nav-buttons">
         <NavLink to="/">
-          <button className='nav-btn'>Home</button>
+          <button className='nav-button'>Home</button>
         </NavLink>
         <NavLink to="/bird-gallery">
-          <button className='nav-btn'>Gallery</button>
+          <button className='nav-button'>Gallery</button>
         </NavLink>
         <NavLink to="/favorites" >
-          <button className='nav-btn'>Favorite Birds</button>
+          <button className='nav-button'>Favorite Birds</button>
         </NavLink>
       </div>
     </header>

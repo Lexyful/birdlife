@@ -31,7 +31,7 @@
   scale: 1.01;
 }
 
-.nav-btns {
+.nav-buttons {
   display: flex;
   position: fixed;
   top: 20px;
@@ -39,7 +39,7 @@
   width: auto;
 }
 
-.nav-btn {
+.nav-button {
   height: 50px;
   width: 160px;
   margin: 5px;
@@ -55,14 +55,14 @@
   transition: 0.5ms;
 }
 
-.nav-btn:hover {
+.nav-button:hover {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.711);
   background-color: #d9bb24;
   border: 3px solid #e3bc23;
   scale: 1.01;
 }
 
-.nav-btn:active {
+.nav-button:active {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.711);
   background-color: #307cb2;
   border: 3px solid #f2bfc8;
