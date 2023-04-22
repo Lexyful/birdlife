@@ -4,7 +4,7 @@ describe('Gallery', () => {
       fixture: "gallery.json"
     })
     cy.visit('http://localhost:3000/bird-gallery')
-    cy.get('[href="/bird-gallery"] > .nav-button')
+    cy.get('[href="/bird-gallery"] > .nav-button').click()
   })
 
   it('should display all of the birds', () => {
@@ -12,10 +12,22 @@ describe('Gallery', () => {
   })
 
   it('Should have the images and buttons for each card', () => {
-    cy.get('.gallery-container > :nth-child(1)').find('img').should('have.attr', 'src', "https://cdn.shibe.online/birds/aec6e08e344aed0a0331fe86df0e6e58170952e1.jpg")
-    cy.get('.gallery-container> :nth-child(1)').find('.favorite-button')
-    cy.get('.gallery-container > :nth-child(6)').find('img').should('have.attr', 'src', "https://cdn.shibe.online/birds/a013ab07774e8a693fe676d92d93c93b7578ac8f.jpg")
-    cy.get('.gallery-container > :nth-child(6)').find('.favorite-button')
+    cy.get(':nth-child(1) > .bird-card').should('have.attr', 'src', "https://cdn.shibe.online/birds/1be4e2a29bfea578c0dd53cc8354f5bdeb255eb8.jpg")
+    cy.get(':nth-child(1) > .sighting-button')
+    cy.get(':nth-child(2) > .bird-card').should('have.attr', 'src', "https://cdn.shibe.online/birds/aec6e08e344aed0a0331fe86df0e6e58170952e1.jpg")
+    cy.get(':nth-child(2) > .sighting-button')
+  
+  })
+
+  it('Should show an error message when random bird can/t be fetched', () => {
+      cy.intercept('GET', 'https://shibe.online/api/birds?count=50&urls=true&httpsUrls=true', {
+        statusCode: 404,  
+      })
+      cy.visit('http://localhost:3000/bird-gallery')
+      cy.get('[href="/bird-gallery"] > .nav-button').click()
+      cy.get('.error-message')
+   
+    })
   })
   
-})
+  

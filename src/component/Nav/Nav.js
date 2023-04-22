@@ -15,8 +15,8 @@ export const Nav = () => {
         <NavLink to="/bird-gallery">
           <button className='nav-button'>Gallery</button>
         </NavLink>
-        <NavLink to="/favorites" >
-          <button className='nav-button'>Favorite Birds</button>
+        <NavLink to="/sightings" >
+          <button className='nav-button'>Sightings</button>
         </NavLink>
       </div>
     </header>

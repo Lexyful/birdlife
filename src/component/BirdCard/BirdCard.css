@@ -11,8 +11,8 @@
 
 }
 
-.favorite-button {
-  width: 60px;
+.sighting-button {
+  width: 100px;
   height: 30px;
   border: 0;
   margin: 6px;
@@ -21,18 +21,18 @@
   cursor: pointer;
   transition: 0.5s;
   font-size: large;
-  /* font-weight: bold; */
+ border-radius: 10px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.571);
 }
 
-.favorite-button:hover {
+.sighting-button:hover {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.711);
   background-color: #f9f1c8;
   border: 3px solid #f6f6f6;
   scale: 1.01;
 }
 
-.favorite-button:disabled {
+.sighting-button:disabled {
   background-color: grey;
   color: darkgray;
   pointer-events: none;

@@ -1,4 +1,4 @@
-.favorite-card {
+.sighting-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,21 +6,21 @@
   height: 200px;
 }
 
-.favorit-bird-card {
+.sighting-bird-card {
   height: 200px;
 }
 
 .delete-button {
-  width: 60px;
+  width: 100px;
   height: 30px;
   border: 0;
+  border-radius: 10px;
   margin: 6px;
   background: #f6e08b;
   color: rgb(90, 89, 89);
   cursor: pointer;
   transition: 0.5s;
   font-size: large;
-  /* font-weight: bold; */
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.571);
 }
 

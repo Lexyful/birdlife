@@ -1,21 +1,28 @@
 import React, {useEffect, useState} from 'react'
+import PropTypes from 'prop-types';
 import './BirdCard.css'
 
-export const BirdCard = ({ bird, onAddFavorite }) => {
+export const BirdCard = ({ bird, onAddSighting }) => {
   const [disabled, setDisabled] = useState(false);
 
-  const handleAddFavorite = () => {
-    onAddFavorite(bird);
+  const handlesighting = () => {
+    onAddSighting(bird);
     setDisabled(true);
   }
 
   return(  
     <div className='card'>
       <img className="bird-card" src={bird} alt="" />
-      <button onClick={handleAddFavorite} className="favorite-button" disabled={disabled}>Save</button>
+      <button onClick={handlesighting} className="sighting-button" disabled={disabled}>Sighted</button>
     </div>  
   )
 }
 
+
+
+BirdCard.propTypes = {
+  bird: PropTypes.string.isRequired,
+  onAddSighting: PropTypes.func.isRequired
+};
 
 

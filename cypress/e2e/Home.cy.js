@@ -15,7 +15,7 @@ describe('Home', () => {
     cy.get('.nav-buttons')
     cy.get('.nav-button').contains('Home')
     cy.get('.nav-button').contains('Gallery')
-    cy.get('.nav-button').contains('Favorite Birds')
+    cy.get('.nav-button').contains('Sightings')
   })
 
   it('should say Welcome when the user enters the site', () => {
@@ -35,7 +35,8 @@ describe('Home', () => {
     cy.get('.random-bird-img').should('have.attr', 'src').should('eq',"https://cdn.shibe.online/birds/1be4e2a29bfea578c0dd53cc8354f5bdeb255eb8.jpg")
    
   })
-  it('Should show an error message when random dog can/t be fetched', () => {
+
+  it('Should show an error message when random bird can/t be fetched', () => {
     cy.intercept('GET', 'https://shibe.online/api/birds?count=50&urls=true&httpsUrls=true', {
       statusCode: 404,  
     })
