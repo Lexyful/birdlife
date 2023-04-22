@@ -16,13 +16,16 @@ export const Home = ({ birds }) => {
   return(
     <section className="home-page">
       <h2 className="welcome">Welcome</h2>
-      <div className="home-contents-container">
+      <div className="beginners-container">
+        <div className="hello-beginners">
+          <p>Hello bird watching beginners! Not sure where to start your bird watching journey? Go to the Gallery page and browse birds. Once you have sighted the birds out in the wild, save them to the Sightngs page to keep track of the birds, you have checked off of the list. If you do not have time to go out but you would still like to sight these birds, click the Get Random Bird and bird watch right on this very page!</p>
+        </div>
       <div className="get-random">
         <div className="img-container">
             <img className="random-bird-img" src={randomBird}/>
-            </div>
+        </div>
           <button onClick={getRandomBird} >Get Random Bird!</button>
-            </div>
+        </div>
         </div>
     </section>
   );

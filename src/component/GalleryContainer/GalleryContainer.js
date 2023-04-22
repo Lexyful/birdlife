@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
-import React, { useState } from "react";
+import React from "react";
 import { BirdCard } from "../BirdCard/BirdCard";
-import {  Link } from 'react-router-dom';
 import './GalleryContainer.css'
 
 export const GalleryContainer = ({ birds, onAddSighting }) => {
@@ -17,7 +16,6 @@ export const GalleryContainer = ({ birds, onAddSighting }) => {
     </div>
   )
 }
-
 
 GalleryContainer.propTypes = {
   birds: PropTypes.array.isRequired,

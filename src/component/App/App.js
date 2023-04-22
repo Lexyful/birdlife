@@ -15,9 +15,7 @@ const App = () => {
     fetchData()
     .then(data => {
         setBirds(data)
-        console.log(data)
-       
-        // console.log(data.some(element))
+
     })
     
     .catch(error => {

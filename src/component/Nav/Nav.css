@@ -1,35 +1,33 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap"); */
-
 .nav-bar {
-  /* position: fixed; */
-  /* z-index: 1; */
+  --card-gradient:#0e0e0d, #000000;
   top: 0;
   width: 100%;
   height: 130px;
-  background: linear-gradient(0.85turn, #090800 55%, #e8f1f7 50%);
-  color: white;
+
+  background-image: linear-gradient(
+    var(--card-gradient),
+    white max(9.5rem, 27vh)
+  );
 }
 
 .birdlife-title {
-  font-family: 'Actor';font-size: 22px;
-  /* position: absolute; */
+  font-family: 'Actor';font-size: 25px;
   top: 20px;
-  left: 20px;
+  left: 30px;
   font-size: 3.0em;
-  color: white;
+  color:2px 4px 4px rgb(244, 201, 123);
   text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
   margin: 0;
 }
 
 .birdlife-title:hover {
-  color: white;
-  text-shadow: 2px 4px 4px rgb(242 192 201);
+ color: rgb(192, 221, 244);
+  text-shadow: 2px 4px 4px rgb(128, 137, 145);
 }
-
 
 .nav-buttons {
   display: flex;
-  position: fixed;
+  display: inline-block;
   top: 20px;
   right: 20px;
   width: auto;
@@ -41,7 +39,7 @@
   margin: 5px;
   border: 0;
   border-radius: 5px;
-  background-color: #fcfcfc;
+  color:2px 4px 4px rgb(244, 201, 123);
   color: rgb(0, 0, 0);
   font-family: 'Actor';
   font-size: medium;

@@ -25,12 +25,30 @@
   color: white;
 }
 
-.home-contents-container {
+.beginners-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content:center;
   width: 100vw;
   margin-top: 80px;
+}
+
+.hello-beginners {
+  font-family: 'Actor';
+  width: 30vw;
+  height: 20vh;
+  border-radius: 10px;
+  background-color: #000000;
+  color: white;
+  margin-top: 100px;
+  padding: 10px;
+  margin-right: 30px;
+}
+
+.hello-beginners > p { 
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.571);
+  font-size: 1.3em;
 }
 
 .get-random {
@@ -70,9 +88,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
   width: 350px;
   height: 300px;
-  /* border: 4mm ridge #808383; */
   background-color: #fafafa;
 }
 

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types';
 import './BirdCard.css'
 
@@ -23,8 +23,6 @@ export const BirdCard = ({ bird, onAddSighting }) => {
     </div>
   );
 };
-
-
 
 BirdCard.propTypes = {
   bird: PropTypes.string.isRequired,
