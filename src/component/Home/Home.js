@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import PropTypes from 'prop-types';
 import "./Home.css"
 
 export const Home = ({ birds }) => {
@@ -6,7 +7,7 @@ export const Home = ({ birds }) => {
 
 
   const getRandomBird = () => {
-    const mainBirdPicture = birds[Math.floor(Math.random() * (birds.length + 1))]
+    const mainBirdPicture = birds[Math.floor(Math.random() * (birds.length ))]
     setRandomBird(mainBirdPicture)
   }
 
@@ -25,4 +26,8 @@ export const Home = ({ birds }) => {
         </div>
     </section>
   );
+}
+
+Home.propTypes = {
+  birds: PropTypes.array.isRequired,
 }

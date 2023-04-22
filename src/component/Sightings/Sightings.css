@@ -1,0 +1,21 @@
+.sighting-message {
+  height: inherit;
+  margin-top: 130px;
+  padding-top: 30px;
+  color: black;
+  font-family: 'Courgette', 'cursive';
+  text-align: center;
+  font-size: 3.0em;
+}
+
+.sightings {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: fit-content;
+  min-height: inherit;
+  margin-top: 130px;
+  padding-top: 30px;
+  
+}

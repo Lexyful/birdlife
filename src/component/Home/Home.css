@@ -81,11 +81,3 @@
   max-width: 100%;
   object-fit: fill;
 }
-
-.error-message {
-  background-color: rgba(255, 0, 0, 0.301);
-  color:darkred;
-  font-size: xx-large;
-  text-align: center;
-  height: fit-content;
-}

@@ -1,12 +1,13 @@
+import PropTypes from 'prop-types';
 import React, { useState } from "react";
 import { BirdCard } from "../BirdCard/BirdCard";
 import {  Link } from 'react-router-dom';
 import './GalleryContainer.css'
 
-export const GalleryContainer = ({ birds, onAddFavorite }) => {
+export const GalleryContainer = ({ birds, onAddSighting }) => {
   const birdCards = birds.map(bird => {
     return (
-      <BirdCard bird={bird} key={bird} onAddFavorite={onAddFavorite} />
+      <BirdCard bird={bird} key={bird} onAddSighting={onAddSighting} />
     )
   })
 
@@ -16,3 +17,9 @@ export const GalleryContainer = ({ birds, onAddFavorite }) => {
     </div>
   )
 }
+
+
+GalleryContainer.propTypes = {
+  birds: PropTypes.array.isRequired,
+  onAddSighting: PropTypes.func.isRequired,
+};
