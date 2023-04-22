@@ -3,7 +3,7 @@ describe('Gallery', () => {
     cy.intercept('GET', 'https://shibe.online/api/birds?count=50&urls=true&httpsUrls=true', {
       fixture: "gallery.json"
     })
-    cy.visit('http://localhost:3000/bird-gallery')
+    cy.visit('https://birdlife-lexyful.vercel.app/bird-gallery')
     cy.get('[href="/bird-gallery"] > .nav-button').click()
   })
 
@@ -23,10 +23,9 @@ describe('Gallery', () => {
       cy.intercept('GET', 'https://shibe.online/api/birds?count=50&urls=true&httpsUrls=true', {
         statusCode: 404,  
       })
-      cy.visit('http://localhost:3000/bird-gallery')
+      cy.visit('https://birdlife-lexyful.vercel.app/bird-gallery')
       cy.get('[href="/bird-gallery"] > .nav-button').click()
       cy.get('.error-message')
-   
     })
   })
   

@@ -14,7 +14,6 @@
   justify-content: flex-start;
   height: 100%;
   margin-top: 130px;
-  font-family: 'Poppins', sans-serif;
   overflow: hidden;
 }
 
@@ -35,7 +34,7 @@
 
 .hello-beginners {
   font-family: 'Actor';
-  width: 30vw;
+  max-width: 30vw;
   height: 20vh;
   border-radius: 10px;
   background-color: #000000;

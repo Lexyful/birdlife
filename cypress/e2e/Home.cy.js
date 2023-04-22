@@ -4,7 +4,7 @@ describe('Home', () => {
         
       fixture: "randomBird.json"
     })
-    cy.visit('http://localhost:3000/')
+    cy.visit('https://birdlife-lexyful.vercel.app/')
   })
 
   it('should have a title', () => {
