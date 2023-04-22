@@ -8,7 +8,6 @@
 
 .bird-card {
   height: 200px;
-
 }
 
 .sighting-button {
@@ -21,7 +20,7 @@
   cursor: pointer;
   transition: 0.5s;
   font-size: large;
- border-radius: 10px;
+  border-radius: 10px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.571);
 }
 

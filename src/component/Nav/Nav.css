@@ -8,9 +8,7 @@
     var(--card-gradient),
     white max(9.5rem, 27vh)
   );
-  /* ...existing styles */
 }
-
 
 .birdlife-title {
   font-family: 'Actor';font-size: 25px;
@@ -26,7 +24,6 @@
  color: rgb(192, 221, 244);
   text-shadow: 2px 4px 4px rgb(128, 137, 145);
 }
-
 
 .nav-buttons {
   display: flex;

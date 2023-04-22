@@ -20,6 +20,7 @@ describe('Home', () => {
 
   it('should say Welcome when the user enters the site', () => {
     cy.get('h2').contains('Welcome')
+    cy.get('.beginners-container').contains('Hello bird watching beginners! Not sure where to start your bird watching journey? Go to the Gallery page and browse birds. Once you have sighted the birds out in the wild, save them to the Sightngs page to keep track of the birds, you have checked off of the list. If you do not have time to go out but you would still like to sight these birds, click the Get Random Bird and bird watch right on this very page!')
   })
 
   it('Should display a picture of a random bird', () => {
@@ -41,7 +42,7 @@ describe('Home', () => {
       statusCode: 404,  
     })
     cy.get('.error-message')
-  })
+    })
 
   });
 
