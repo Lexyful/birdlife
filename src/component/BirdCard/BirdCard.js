@@ -5,18 +5,24 @@ import './BirdCard.css'
 export const BirdCard = ({ bird, onAddSighting }) => {
   const [disabled, setDisabled] = useState(false);
 
-  const handlesighting = () => {
+  const handleSighting = () => {
     onAddSighting(bird);
     setDisabled(true);
   }
 
-  return(  
-    <div className='card'>
+  return (
+    <div className="card">
       <img className="bird-card" src={bird} alt="" />
-      <button onClick={handlesighting} className="sighting-button" disabled={disabled}>Sighted</button>
-    </div>  
-  )
-}
+      <button
+        onClick={handleSighting}
+        className="sighting-button"
+        disabled={disabled}
+      >
+        {disabled ? "Sighted!" : "Sighted"}
+      </button>
+    </div>
+  );
+};
 
 
 
