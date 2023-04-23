@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from "react";
 import { BirdCard } from "../BirdCard/BirdCard";
-import './GalleryContainer.css'
+import './GalleryContainer.css';
 
 export const GalleryContainer = ({ birds, onAddSighting }) => {
   const birdCards = birds.map(bird => {
@@ -14,7 +14,7 @@ export const GalleryContainer = ({ birds, onAddSighting }) => {
     <div className="gallery-container">
       {birdCards}
     </div>
-  )
+  );
 }
 
 GalleryContainer.propTypes = {

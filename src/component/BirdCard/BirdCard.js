@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './BirdCard.css'
+import './BirdCard.css';
 
 export const BirdCard = ({ bird, onAddSighting }) => {
   const [disabled, setDisabled] = useState(false);

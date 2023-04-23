@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from 'prop-types';
 import "./SightingCard.css";
 
 export const SightingCard = ({url, deleteSighting}) => {
-  const [sightingss, setSightings] = useState([])
-
+ 
   return (
     <div className="sighting-card">
       <img className="sighting-bird-card" src={url} alt=""/>

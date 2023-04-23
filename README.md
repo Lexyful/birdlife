@@ -1,71 +1,61 @@
-# Getting Started with Create React App
+# [birdlife](https://birdlife.vercel.app/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+***
+### Contributors:
+- [Lexye Jordan](https://github.com/Lexyful)
+***
 
-## Available Scripts
+## Abstract
+birdlife is an app for users who have an interest in bird watching but have little experience in the activity. The app allows a user to look through random pictures of birds on the main page. The gallery page allows the user to select the birds that they've sighted in the wild. The birds that have been selected as "sighted" will then be stored in the sighted birds page. The user can also delete the birds in the sighted birds page if they've clicked the sighted button by accident or wants to sight it again  later.
 
-In the project directory, you can run:
+***
 
-### `npm start`
+### Technologies Used:
+- JavaScript
+- HTML
+- CSS
+- Router
+- Cypress
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+***
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Installation Instructions:
 
-### `npm test`
+1. Clone down a local copy of [the repository](https://github.com/Lexyful/birdlife).
+2. `cd` into the repository and run `npm install`.
+3. You can open the project in your preferred text editor.
+4. To host the page on your local server run `npm start`.
+5. Or visit https://birdlife.vercel.app/
+***
+### Preview of App:
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmNmY2RiZDZhMGRlNGVjZTc0MmJjOWRmOGNlNjhmODVjM2E5YTYxYiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/XKJIGjuwbLjvP725l0/giphy.gif)
+***
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Context:
+[Project Spec](https://frontend.turing.edu/projects/module-3/showcase.html)
 
-### `npm run build`
+Completed as part of the Turing School of Software Development 2211 FE Mod 3 curriculum
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Approximate hours to completion: 25
+***
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Learning Goals:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Demonstrate competency with React fundamentals 
+- Use end to end testing with Cypress
+- Implement Router into the App
+- Create a user friendly app for a niche audience
 
-### `npm run eject`
+***
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Wins + Challenges:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Win:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- I built a fun app with a simple api and understood how to use react, router and cypress. There were some speed bumps along the but I enjoyed whole developement process. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Challenge:**
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# birdlife
+- End to end cypress testing
+- Error handling
+- Figuring out how to keep the sightings of birds from duplicating
